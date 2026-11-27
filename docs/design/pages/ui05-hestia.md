@@ -27,6 +27,19 @@ Nguồn đối chiếu ngày 27/11/2026 gồm [Hestia desktop 1440 × 5312](http
 - Ẩn tab khi toàn bộ tab thiếu dữ liệu. Giữ trạng thái “Đang cập nhật” cho thông số chưa đối chiếu với tài liệu hãng.
 - Ghi chú v2 yêu cầu hai video và một album gần nhất theo thiết bị, kèm liên kết đến thư viện đã lọc. Điểm đến của liên kết cần xác nhận vì [UI19](ui19-media-social.md) được đánh dấu tạm hoãn ở bản ra mắt.
 
+### Màu thanh tab desktop
+
+Ảnh chụp Figma ngày 27/11/2026 chọn layer `Tab bar (sticky)` trong cụm Product tabs v2. Mã HEX tra từ [Foundations](../foundations.md).
+
+| Vị trí | Token | Giá trị |
+| --- | --- | --- |
+| Viền thanh tab | `color/border/default` | `#D9E2E8`, 1 px, Inside |
+| Chữ tab mặc định | `color/text/secondary` | `#526575` |
+| Chữ tab đang chọn | `color/text/primary` | `#182F41` |
+| Vạch dưới tab đang chọn | `color/action/default` | `#0B2D48` |
+
+Panel Stroke xác nhận trực tiếp token viền. Ba token còn lại xuất hiện trong Selection colors của cụm tab và được ghép theo các lớp hiển thị trong ảnh. Layer thanh tab chưa có Fill riêng trong panel. Thanh tab đo 1200 × 49 px trên frame desktop 1440, với chiều rộng Fill và chiều cao Hug. Ảnh này thể hiện trạng thái mặc định và đang chọn ở desktop.
+
 ## Frame và trạng thái
 
 | Frame | Node | W × H |
