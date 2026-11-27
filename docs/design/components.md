@@ -1,5 +1,40 @@
 # Component và trạng thái dùng chung
 
+## Màu component theo trạng thái
+
+Đối chiếu bản xuất Figma của thư viện component public ngày 27/11/2026. Mã màu bên dưới tra cùng [Foundations](foundations.md). Các bảng variant trong tài liệu này dẫn đến từng mẫu Figma.
+
+### Nút và liên kết
+
+| Biến thể nút | Nền mặc định | Nền hover | Nền khi nhấn | Chữ và icon | Khi vô hiệu hóa |
+| --- | --- | --- | --- | --- | --- |
+| Primary | `#0B2D48` | `#0F3556` | `#071F35` | `#FFFFFF` | Nền `#EAF0F4`, chữ/icon `#6B7C8A` |
+| Accent | `#B99555` | `#D9C190` | `#D9C190` | `#0B2D48` | Nền `#EAF0F4`, chữ/icon `#6B7C8A` |
+| Secondary | `#FFFFFF` | `#F5F8FA` | `#F5F8FA` | `#0B2D48`, cùng màu viền | Nền trắng, viền `#D9E2E8`, chữ/icon `#6B7C8A` |
+| Tertiary | Trong suốt | Trong suốt | Trong suốt | `#0B2D48` | Nền trong suốt, chữ/icon `#6B7C8A` |
+
+Nút có focus bàn phím giữ nền mặc định và thêm vòng focus. Khi đang gửi, dùng variant Loading và khóa thao tác gửi lặp. Liên kết chữ chuyển từ navy sang `#0F3556` khi hover. Dùng vòng focus cho nút icon và liên kết theo variant tương ứng.
+
+### Ô nhập, điều hướng và thẻ
+
+| Component | Trạng thái | Thay đổi trong thiết kế |
+| --- | --- | --- |
+| Field | Focus | Nền trắng, viền `#12699C` 2 px, thêm vòng focus |
+| Field | Error | Nền trắng, viền `#B53838` 1,5 px, thông báo lỗi cùng màu |
+| Field | Disabled | Nền `#EAF0F4`, viền `#D9E2E8` 1 px, chữ `#6B7C8A` |
+| Nav item | Hover / Active | Chữ `#0B2D48`. Giữ dấu hiệu mục hiện hành theo variant Active |
+| Tab sản phẩm v2 | Default / Active | Chữ mặc định `#526575`, chữ đang chọn `#182F41`, vạch dưới tab đang chọn `#0B2D48`. Xem [thanh tab desktop](pages/ui05-hestia.md#màu-thanh-tab-desktop) |
+| Product card | Hover | Nền trắng, viền `#0B2D48` 1,5 px, bóng `AT/Elevation/Card` |
+| Product card | Focus | Nền trắng, viền `#D9E2E8` 1 px, thêm vòng focus |
+| Gallery thumb | Selected | Nền `#F5F8FA`, viền `#0B2D48` 2 px |
+| Gallery thumb | Focus | Nền `#F5F8FA`, viền `#D9E2E8` 1 px, thêm vòng focus |
+
+- Hover là khi trỏ chuột lên component. Áp dụng trên thiết bị hỗ trợ hover. Trên màn hình cảm ứng, thao tác chạm và trạng thái đã chọn phải hoạt động đầy đủ.
+- Pressed là lúc đang nhấn. Active hoặc Selected thể hiện mục đang mở hoặc đã chọn. Focus bàn phím phải thấy rõ kể cả khi một phần tử đồng thời đang được chọn.
+- Dùng `AT/Focus/Ring` theo variant. Bản xuất component thể hiện bóng viền `0 0 0 3px rgba(18, 105, 156, 0.5)`. Foundations cũng ghi quy tắc chung 2 px với offset 2 px, nên khi đối chiếu component cụ thể dùng thông số của variant đã xác nhận.
+- Lỗi cần có thông báo bằng chữ. Khi Disabled hoặc Loading, kiểm tra cả khả năng tương tác, ngoài màu hiển thị.
+
+
 ## Thư viện component và variant
 
 Nguồn [358:1073](https://www.figma.com/design/uYPcN6opDF68E7Bs7dQT0X/AT-Medical-%E2%80%93-Homepage?node-id=358-1073). Kích thước variant là kích thước mẫu trong thư viện.
