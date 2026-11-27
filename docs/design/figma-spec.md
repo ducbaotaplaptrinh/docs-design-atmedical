@@ -2,9 +2,16 @@
 
 Snapshot REST `2424480365962291905`, cập nhật 2026-11-22T05:24:51Z. Thiết kế ở trạng thái Internal review. Link gốc mở [page Desktop 1440](https://www.figma.com/design/uYPcN6opDF68E7Bs7dQT0X/AT-Medical-%E2%80%93-Homepage?node-id=358-1074).
 
+## Đối chiếu Figma ngày 27/11/2026
+
+- [UI05–UI12](pages/ui05-hestia.md#bố-cục-sản-phẩm-v2) dùng bố cục sản phẩm v2 theo ghi chú mới của Figma.
+- [UI19](pages/ui19-media-social.md#trạng-thái-ra-mắt) có quyết định nội bộ tạm hoãn ở bản ra mắt.
+- [HP26 / Homepage / Desktop 1440](https://www.figma.com/design/uYPcN6opDF68E7Bs7dQT0X/AT-Medical-%E2%80%93-Homepage?node-id=578-18742) xuất hiện bên cạnh các bản homepage khác. Cần xác nhận frame bàn giao trước khi thay đặc tả UI01.
+- Cấu trúc section và kích thước chính của [UI02](pages/ui02-about.md) khớp ở 1440 và 390 px. Bảng token màu, font và khoảng cách tiếp tục tham chiếu snapshot REST vì lượt đọc chi tiết Figma đã hết.
+
 ## Dùng với Codex
 
-1. Đọc [Foundations](foundations.md) và file trang đang triển khai.
+1. Đọc [quy tắc triển khai giao diện public](foundations.md#quy-tắc-triển-khai-giao-diện-public) và file trang đang triển khai.
 2. Tra [Components](components.md) khi cần variant, overlay hoặc prototype. Xem [bàn giao](handoff.md) để biết nội dung cần duyệt.
 3. Dùng Markdown làm nguồn tham chiếu trước. Chỉ gọi Figma MCP khi thiết kế thay đổi, rồi cập nhật file trang hoặc quy tắc liên quan.
 

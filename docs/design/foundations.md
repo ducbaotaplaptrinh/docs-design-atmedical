@@ -1,5 +1,29 @@
 # Foundations · A&T Medical
 
+## Quy tắc triển khai giao diện public
+
+### Responsive và khoảng cách
+
+- Chọn mode Mobile dưới 768 px, Tablet từ 768 đến 1199 px và Desktop từ 1200 px. Dùng các frame 390, 768, 1440 và 1920 px để đối chiếu. Kiểm tra thêm 375, 767, 1199 và 1200 px để phát hiện tràn hoặc gãy bố cục ngay tại điểm đổi mode.
+- Căn giữa container theo chiều rộng tối đa 1200 px. Mobile chừa hai lề 20 px, tablet chừa 24 px. Desktop giữ lề tối thiểu 24 px khi sát ngưỡng đổi mode, lề tính ra là 120 px ở 1440 và 360 px ở 1920. Kích thước 350 và 720 px là kết quả tại frame 390 và 768 px.
+- Áp dụng `layout/section-y` cho padding trên/dưới section, `layout/section-gap` cho khoảng giữa các cụm nội dung, `layout/grid-gap` cho giữa các cột hoặc thẻ, và `layout/card-pad` cho padding trong thẻ. Dùng bảng token Responsive bên dưới và giữ cùng nhịp giữa các section cùng loại.
+- Để chiều cao section và thẻ tăng theo nội dung thực tế. Ưu tiên Grid hoặc Flexbox cho việc xuống cột. Nội dung dài cần bọc dòng. Tab và bảng rộng có thể cuộn trong vùng của chúng, đồng thời trang vẫn vừa viewport.
+- Dùng khoảng trống và chiều cao theo header thực tế khi đặt tab bar dính. Kiểm tra nút nổi, tab bar và lớp phủ trên mobile để chúng không che nút hoặc nội dung đang thao tác.
+
+### Màu sắc
+
+- Dùng token theo vai trò của giao diện. Nền mặc định dùng `color/bg/primary`, nền phân lớp dùng `color/bg/subtle`, chữ chính/phụ dùng `color/text/primary` và `color/text/secondary`. Nền tối dùng `color/bg/inverse` với `color/text/inverse`.
+- Nút chính dùng nhóm `color/action/default`, `hover`, `pressed` và `disabled`. Nút chuyển đổi màu vàng dùng `color/action/accent` và `color/action/accent-hover` với chữ navy. Nhãn vàng trên nền sáng dùng `color/text/gold`. Kiểm tra độ tương phản trên nền thực tế, kể cả chữ đặt trên ảnh.
+- Dùng token trạng thái cho nền và chữ tương ứng. Lỗi và thành công cần có thông báo bằng chữ. Focus bàn phím dùng `color/focus/ring` và phải thấy rõ trên nền hiện tại.
+
+### Font chữ
+
+- Dùng Be Vietnam Pro cho giao diện public. Chọn text style theo vai trò như Display, H1–H4, Body, Label và Overline, giữ cùng lúc weight, cỡ chữ, chiều cao dòng và khoảng cách ký tự theo bảng Typography.
+- Dùng style Mobile cho Display và H1–H3 ở mode Mobile, giữ style Desktop ở 1920 px. Trên tablet, ưu tiên style của frame tương ứng và kiểm tra tiêu đề dài khi lưới đổi cột.
+- Thử tiêu đề, nhãn nút và nội dung VI/EN dài, bao gồm chữ có dấu. Giữ thứ bậc tiêu đề và cho phép xuống dòng trước khi cân nhắc ngoại lệ về typography.
+
+Các quy tắc triển khai ở trên diễn giải bảng token hiện có. Khi một frame mới có thông số riêng đã được xác nhận, ghi ngoại lệ trong file của trang đó.
+
 ## Foundations
 
 Nguồn [380:386](https://www.figma.com/design/uYPcN6opDF68E7Bs7dQT0X/AT-Medical-%E2%80%93-Homepage?node-id=380-386). Dùng navy cho primary, trắng/xám nhạt cho nền, gold cho CTA chuyển đổi và overline. Các đơn vị kích thước là px.
@@ -125,7 +149,7 @@ Nguồn quy tắc [373:17560](https://www.figma.com/design/uYPcN6opDF68E7Bs7dQT0
 | Token | Mobile <768 | Tablet 768–1199 | Desktop ≥1200 |
 | --- | --- | --- | --- |
 | layout/container | 350 | 720 | 1200 |
-| layout/page-margin | 20 | 24 | 120 |
+| layout/page-margin tại frame tham chiếu | 20 tại 390 | 24 tại 768 | 120 tại 1440 |
 | layout/section-y | 48 | 64 | 96 |
 | layout/section-gap | 24 | 32 | 48 |
 | layout/grid-gap | 16 | 20 | 24 |

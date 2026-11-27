@@ -3,6 +3,10 @@
 Đọc [Foundations](../foundations.md), [Components](../components.md) và [ghi chú bàn giao](../handoff.md). Nguồn và phiên bản ở [mục lục](../figma-spec.md).
 
 Nội dung dưới đây là mẫu thiết kế. Đối chiếu dữ liệu thật, bản dịch và khả năng chỉnh sửa trong Admin trước khi triển khai. Kích thước đo trong Figma là tham chiếu. Cho phép chiều cao thay đổi theo nội dung. Với chiều rộng chưa có frame riêng, dùng quy tắc ở Foundations.
+## Trạng thái ra mắt
+
+[Ghi chú Figma ngày 26/11/2026](https://www.figma.com/design/uYPcN6opDF68E7Bs7dQT0X/AT-Medical-%E2%80%93-Homepage?node-id=591-23565) đánh dấu UI19 tạm hoãn ở bản ra mắt. Đây là quyết định nội bộ đang chờ A&T duyệt. Giữ frame để tham khảo. Hướng trong ghi chú là hiển thị video theo ngữ cảnh ở trang sản phẩm và Sự kiện/Bàn giao, rồi cân nhắc tab Video trong mục Kiến thức khi có khoảng 10–15 video.
+
 ## Frame và trạng thái
 
 | Frame | Node | W × H |

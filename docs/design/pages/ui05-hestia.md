@@ -3,6 +3,30 @@
 Đọc [Foundations](../foundations.md), [Components](../components.md) và [ghi chú bàn giao](../handoff.md). Nguồn và phiên bản ở [mục lục](../figma-spec.md).
 
 Nội dung dưới đây là mẫu thiết kế. Đối chiếu dữ liệu thật, bản dịch và khả năng chỉnh sửa trong Admin trước khi triển khai. Kích thước đo trong Figma là tham chiếu. Cho phép chiều cao thay đổi theo nội dung. Với chiều rộng chưa có frame riêng, dùng quy tắc ở Foundations.
+## Bố cục sản phẩm v2
+
+Nguồn đối chiếu ngày 27/11/2026 gồm [Hestia desktop 1440 × 5312](https://www.figma.com/design/uYPcN6opDF68E7Bs7dQT0X/AT-Medical-%E2%80%93-Homepage?node-id=595-24509) và [ghi chú UI05 v2](https://www.figma.com/design/uYPcN6opDF68E7Bs7dQT0X/AT-Medical-%E2%80%93-Homepage?node-id=595-24601). Ghi chú xác định bố cục dùng chung cho UI05–UI12. Các bảng chi tiết bên dưới mô tả frame trong snapshot 22/11.
+
+1. Đầu trang gồm ảnh, tên, mô tả ngắn, ba thông số nổi bật và hai nút Nhận báo giá / Đăng ký demo.
+2. Dải cam kết đào tạo và hỗ trợ.
+3. [Cụm tab sản phẩm](https://www.figma.com/design/uYPcN6opDF68E7Bs7dQT0X/AT-Medical-%E2%80%93-Homepage?node-id=595-24552).
+4. Hình ảnh và video thực tế.
+5. Trước/sau khi có ảnh thật đã được khách đồng ý. Ghi số buổi, khoảng cách giữa hai ảnh và chú thích “Kết quả có thể khác nhau tùy cơ địa”. Ẩn khối khi chưa có ảnh đủ điều kiện.
+6. Câu hỏi thường gặp, dải liên hệ, sản phẩm cùng nhóm, footer.
+
+| Tab | Nội dung | Hash trên URL |
+| --- | --- | --- |
+| Tổng quan | Giới thiệu, lĩnh vực ứng dụng | `#tong-quan` |
+| Công nghệ | Cơ chế hoạt động, hệ tay cầm | `#cong-nghe` |
+| Dịch vụ & cấu hình | Dịch vụ có thể triển khai, cấu hình bàn giao | `#dich-vu` |
+| Thông số | Bảng thông số, catalogue | `#thong-so` |
+| Pháp lý | Hồ sơ pháp lý | `#phap-ly` |
+
+- Tab bar dính dưới header. Đổi tab tại chỗ, cập nhật hash để chia sẻ đúng tab và cho phép mở trực tiếp qua hash. Dùng các vai trò `tablist`, `tab`, `tabpanel` và hỗ trợ phím mũi tên trái/phải. Giữ nội dung các tab trong HTML.
+- Mobile dùng biến thể riêng của `AT / Product tabs`. Thanh tab cuộn ngang và tự đưa tab đang chọn vào vùng nhìn thấy. Ghi chú Figma xác nhận hành vi này. Kích thước biến thể mobile v2 cần đối chiếu thêm.
+- Ẩn tab khi toàn bộ tab thiếu dữ liệu. Giữ trạng thái “Đang cập nhật” cho thông số chưa đối chiếu với tài liệu hãng.
+- Ghi chú v2 yêu cầu hai video và một album gần nhất theo thiết bị, kèm liên kết đến thư viện đã lọc. Điểm đến của liên kết cần xác nhận vì [UI19](ui19-media-social.md) được đánh dấu tạm hoãn ở bản ra mắt.
+
 ## Frame và trạng thái
 
 | Frame | Node | W × H |

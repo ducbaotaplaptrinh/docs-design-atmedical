@@ -3,6 +3,8 @@
 Đọc [Foundations](../foundations.md), [Components](../components.md) và [ghi chú bàn giao](../handoff.md). Nguồn và phiên bản ở [mục lục](../figma-spec.md).
 
 Nội dung dưới đây là mẫu thiết kế. Đối chiếu dữ liệu thật, bản dịch và khả năng chỉnh sửa trong Admin trước khi triển khai. Kích thước đo trong Figma là tham chiếu. Cho phép chiều cao thay đổi theo nội dung. Với chiều rộng chưa có frame riêng, dùng quy tắc ở Foundations.
+Áp dụng [bố cục và quy tắc tab sản phẩm v2](ui05-hestia.md#bố-cục-sản-phẩm-v2) cho thiết bị này. Các bảng bên dưới ghi frame trong snapshot 22/11 và dùng để tra dữ liệu, hình ảnh và trạng thái theo model.
+
 ## Frame và trạng thái
 
 | Frame | Node | W × H |
